@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Media Tags Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        section {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        img, video, iframe {
+            max-width: 100%;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Media Tags Example</h1>
+
+    <!-- Image Tag -->
+    <section>
+        <h2>Image Tag</h2>
+        <p>The <code>&lt;img&gt;</code> tag is used to display images.</p>
+        <img src="https://www.google.com/imgres?imgurl=https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s%3D612x612%26w%3D0%26k%3D20%26c%3DA63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8%3D&imgrefurl=https://www.istockphoto.com/photos/nature-valley&h=384&w=612&tbnid=oa7_1poSvrt70M&source=sa.im&tbnh=384&tbnw=612&usg=AI4_-kQVYQbd6u6d3eElwJQ060w9aMZH2g&vet=1&docid=T0n8TMjyQ1Q5oM" alt="Sample Image">
+    </section>
+
+    <!-- Video Tag -->
+    <section>
+        <h2>Video Tag</h2>
+        <p>The <code>&lt;video&gt;</code> tag is used to play videos.</p>
+        <video controls width="400">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Audio Tag -->
+    <section>
+        <h2>Audio Tag</h2>
+        <p>The <code>&lt;audio&gt;</code> tag is used to play audio files.</p>
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+    </section>
+
+
+</body>
+</html>
