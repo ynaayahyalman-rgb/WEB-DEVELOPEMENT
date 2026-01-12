@@ -1,0 +1,33 @@
+/* Global css */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* external css */
+h3 {
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h4 {
+    color: #FF5722;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+#my_id {
+    color: #2196F3;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.my_class {
+    color: #9C27B0;
+    font-size: 16px;
+    margin: 5px 0;
+}
+h5,p {
+    color: #00d5ff;
+    line-height: 1.6;
+    margin: 10px 0;
+}
