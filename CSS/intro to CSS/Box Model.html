@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Lesson</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    .box-model-example {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 40px;
+    }
+    .content {
+        background-color: lightblue;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 1;
+    }
+    .padding {
+        background-color: lightgreen;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: 0;
+    }
+    .border {
+        border: 5px solid orange;
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        top: 35px;
+        left: 35px;
+        z-index: -1;
+    }
+    .margin {
+        background-color: lightcoral;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        z-index: -2;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Understanding the CSS Box Model</h1>
+    </header>
+    <main>
+        <section>
+            <h2>What is the Box Model?</h2>
+            <p>The CSS Box Model is a fundamental concept in web design that describes how elements on a webpage are structured and how they interact with each other. Each element is represented as a rectangular box, which consists of four main components: content, padding, border, and margin.</p>
+        </section>
+        <section>
+            <h2>Components of the Box Model</h2>
+            <ul>
+                <li><strong>Content:</strong> The actual content of the box, such as text or images.</li>
+                <li><strong>Padding:</strong> The space between the content and the border. It creates breathing room inside the box.</li>
+                <li><strong>Border:</strong> The line that surrounds the padding (if any) and content. It can be styled with different widths, colors, and styles.</li>
+                <li><strong>Margin:</strong> The space outside the border that separates the box from other elements on the page.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Visual Representation</h2>
+            <div class="box-model-example">
+                <div class="content">Content</div>
+                <div class="padding">Padding</div>
+                <div class="border">Border</div>
+                <div class="margin">Margin</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Web Design Lessons</p>
+    </footer>
+</body>
+</html>
