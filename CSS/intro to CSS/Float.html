@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Lesson</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Understanding the CSS Box Model</h1>
+    </header>
+    <section class="box-model-example">
+        <div class="margin">Margin</div>
+        <div class="border">Border</div>
+        <div class="padding">Padding</div>
+        <div class="content">Content</div>
+    </section>
+    <footer>
+        <p>&copy; 2024 CSS Tutorials</p>
+    </footer>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    .box-model-example {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 40px;
+    }
+    .content {
+        background-color: lightblue;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 1;
+    }
+    .padding {
+        background-color: lightgreen;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: 0;
+    }
+    .border {
+        border: 5px solid orange;
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        top: 35px;
+        left: 35px;
+        z-index: -1;
+    }
+    .margin {
+        background-color: lightcoral;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        z-index: -2;
+    }
+</style>
+        <h2>CSS Box Model Components</h2>
+        <p>The CSS Box Model consists of four main components: content, padding, border, and margin. Each component plays a crucial role in how elements are displayed on a webpage.</p>
+        <ul>
+            <li><strong>Content:</strong> The innermost part where text and images appear.</li>
+            <li><strong>Padding:</strong> The space between the content and the border.</li>
+            <li><strong>Border:</strong> The line surrounding the padding (if any) and content.</li>
+            <li><strong>Margin:</strong> The outermost space that separates the element from other elements.</li>
+        </ul>
+    </section>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }   
+    .box-model-example {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 40px;
+    }
+    .content {
+        background-color: lightblue;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 1;
+    }
+    .padding {
+        background-color: lightgreen;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: 0;
+    }
+    .border {
+        border: 5px solid orange;
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        top: 35px;
+        left: 35px;
+        z-index: -1;
+    }
+    .margin {
+        background-color: lightcoral;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        z-index: -2;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Understanding the CSS Box Model</h1>
+    </header>
+    <main>
+        <section>
+            <h2>What is the Box Model?</h2>
+            <p>The CSS Box Model is a fundamental concept in web design that describes how elements on a webpage are structured and how they interact with each other. Each element is represented as a rectangular box, which consists of four main components: content, padding, border, and margin.</p>
+        </section>
+        <section>
+            <h2>Components of the Box Model</h2>
+            <ul>
+                <li><strong>Content:</strong> The actual content of the box, such as text or images.</li>
+                <li><strong>Padding:</strong> The space between the content and the border, providing breathing room inside the box.</li>
+                <li><strong>Border:</strong> The line that wraps around the padding and content
+                <li><strong>Margin:</strong> The outermost space that separates the element from other elements on the page.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 CSS Tutorials</p>
+    </footer>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    .box-model-example {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 40px;
+    }
+    .content {
+        background-color: lightblue;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 1;
+    }
+    .padding {
+        background-color: lightgreen;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: 0;
+    }
+    .border {
+        border: 5px solid orange;
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        top: 35px;
+        left: 35px;
+        z-index: -1;
+    }
+    .margin {
+        background-color: lightcoral;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        z-index: -2;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Understanding the CSS Box Model</h1>
+    </header>
+    <main>
+        <section>
+            <h2>What is the Box Model?</h2>
+            <p>The CSS Box Model is a fundamental concept in web design that describes how elements on a webpage are structured and how they interact with each other. Each element is represented as a rectangular box, which consists of four main components: content, padding, border, and margin.</p>
+        </section>
+        <section>
+            <h2>Components of the Box Model</h2>
+            <ul>
+                <li><strong>Content:</strong> The actual content of the box, such as text or images.</li>
+                <li><strong>Padding:</strong> The space between the content and the border, providing breathing room inside the box.</li>
+                <li><strong>Border:</strong> The line that wraps around the padding and content.</li>
+                <li><strong>Margin:</strong> The outermost space that separates the element from other elements on the page.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 CSS Tutorials</p>
+    </footer>
+
+
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    .box-model-example {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 40px;
+    }
+    .content {
+        background-color: lightblue;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 1;
+    }
+
+    .padding {
+        background-color: lightgreen;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: 0;
+    }
+    .border {
+        border: 5px solid orange;
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        top: 35px;
+        left: 35px;
+        z-index: -1;
+    }
+
+    .margin {
+        background-color: lightcoral;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        z-index: -2;
+    }
+</style>
+</html>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 CSS Tutorials</p>
+    </footer>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    .box-model-example {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 40px;
+    }
+    .content {
+        background-color: lightblue;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 1;
+    }
+    .padding {
+        background-color: lightgreen;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: 0;
+    }
+    .border {
+        border: 5px solid orange;
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        top: 35px;
+        left: 35px;
+        z-index: -1;
+    }
+    .margin {
+        background-color: lightcoral;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        z-index: -2;
+    }
+</style>
+</html>
