@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Positioning in CSS Example</title>
+    <style>
+        .relative-box {
+            position: relative;
+            left: 20px;
+            top: 10px;
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+
+        .absolute-box {
+            position: absolute;
+            left: 250px;
+            top: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+        }
+
+        .fixed-box {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Positioning in CSS Example</h2>
+
+    <div class="relative-box">
+        This box is positioned <strong>relative</strong> to its normal position.
+    </div>
+
+    <div class="absolute-box">
+        This box is positioned <strong>absolute</strong> to the nearest positioned ancestor.
+    </div>
+
+    <div class="fixed-box">
+        This box is positioned <strong>fixed</strong> to the viewport and stays in place when scrolling.
+    </div>
+</body>
+</html>
