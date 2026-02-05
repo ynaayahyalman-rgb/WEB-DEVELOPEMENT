@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mini Among Us Game</title>
+<style>
+    body {
+        margin: 0;
+        background: #000;
+        font-family: Arial;
+        color: white;
+        text-align: center;
+    }
+
+    #game {
+        width: 800px;
+        height: 450px;
+        background: #111;
+        margin: auto;
+        position: relative;
+        border: 3px solid white;
+        overflow: hidden;
+    }
+
+    .player, .impostor {
+        width: 40px;
+        height: 50px;
+        border-radius: 20px 20px 10px 10px;
+        position: absolute;
+    }
+
+    .player {
+        background: red;
+    }
+
+    .impostor {
+        background: lime;
+    }
+
+    .visor {
+        width: 22px;
+        height: 12px;
+        background: lightblue;
+        border-radius: 10px;
+        position: absolute;
+        top: 12px;
+        left: 9px;
+    }
+
+    .task {
+        width: 25px;
+        height: 25px;
+        background: yellow;
+        position: absolute;
+        border-radius: 5px;
+    }
+
+    #status {
+        margin: 10px;
+        font-size: 18px;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>🧑‍🚀 Mini Among Us</h1>
+<p>Complete all tasks before the impostor catches you!</p>
+
+<div id="status">Tasks Left: <span id="tasksLeft">3</span></div>
+
+<div id="game">
+    <div class="player" id="player" style="left:50px; top:50px;">
+        <div class="visor"></div>
+    </div>
+
+    <div class="impostor" id="impostor" style="left:650px; top:300px;">
+        <div class="visor"></div>
+    </div>
+
+    <div class="task" style="left:200px; top:100px;"></div>
+    <div class="task" style="left:400px; top:300px;"></div>
+    <div class="task" style="left:600px; top:150px;"></div>
+</div>
+
+<script>
+    const player = document.getElementById("player");
+    const impostor = document.getElementById("impostor");
+    let tasks = document.querySelectorAll(".task");
+    let tasksLeft = tasks.length;
+
+    let px = 50, py = 50;
+    let ix = 650, iy = 300;
+    const speed = 6;
+
+    document.addEventListener("keydown", e => {
+        if (e.key === "ArrowUp") py -= speed;
+        if (e.key === "ArrowDown") py += speed;
+        if (e.key === "ArrowLeft") px -= speed;
+        if (e.key === "ArrowRight") px += speed;
+
+        px = Math.max(0, Math.min(760, px));
+        py = Math.max(0, Math.min(400, py));
+
+        player.style.left = px + "px";
+        player.style.top = py + "px";
+
+        checkTasks();
+    });
+
+    function moveImpostor() {
+        if (px > ix) ix += 2;
+        if (px < ix) ix -= 2;
+        if (py > iy) iy += 2;
+        if (py < iy) iy -= 2;
+
+        impostor.style.left = ix + "px";
+        impostor.style.top = iy + "px";
+
+        if (Math.abs(px - ix) < 30 && Math.abs(py - iy) < 30) {
+            alert("💀 Game Over! The impostor got you.");
+            location.reload();
+        }
+    }
+
+    function checkTasks() {
+        tasks.forEach(task => {
+            const tx = task.offsetLeft;
+            const ty = task.offsetTop;
+
+            if (Math.abs(px - tx) < 30 && Math.abs(py - ty) < 30) {
+                task.remove();
+                tasksLeft--;
+                document.getElementById("tasksLeft").innerText = tasksLeft;
+            }
+        });
+
+        tasks = document.querySelectorAll(".task");
+
+        if (tasksLeft === 0) {
+            alert("🎉 YOU WIN! All tasks completed.");
+            location.reload();
+        }
+    }
+
+    setInterval(moveImpostor, 50);
+</script>
+
+</body>
+</html>
