@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KSBL - Karachi School of Business & Leadership</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: #002147;
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 22px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* HERO */
+.hero {
+    background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1') center/cover no-repeat;
+    height: 90vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    background-blend-mode: darken;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.hero h2 {
+    font-size: 50px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background: #ffd700;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 20px;
+    width: 280px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* ADMISSIONS */
+#admissions {
+    background: #e6f0ff;
+}
+
+/* CONTACT */
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button.submit {
+    background: #002147;
+    color: white;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    background: #002147;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    .hero h2 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>KSBL</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#programs">Programs</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <h2>Welcome to KSBL</h2>
+    <p>Shaping Future Business Leaders</p>
+    <button onclick="scrollToSection()">Apply Now</button>
+</section>
+
+<!-- PROGRAMS -->
+<section class="section" id="programs">
+    <h2>Our Programs</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>BBA</h3>
+            <p>Undergraduate program focused on business fundamentals.</p>
+        </div>
+
+        <div class="card">
+            <h3>MBA</h3>
+            <p>Advanced leadership and management training.</p>
+        </div>
+
+        <div class="card">
+            <h3>Executive Education</h3>
+            <p>Short courses for professionals and leaders.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ADMISSIONS -->
+<section class="section" id="admissions">
+    <h2>Admissions</h2>
+    <p>Join KSBL and become part of a world-class institution.</p>
+    <ul style="list-style:none; padding:20px;">
+        <li>✔ Online Application</li>
+        <li>✔ Entry Test</li>
+        <li>✔ Interview</li>
+    </ul>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message"></textarea>
+        <button class="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 KSBL | All Rights Reserved</p>
+</footer>
+
+<script>
+function scrollToSection() {
+    document.getElementById("admissions").scrollIntoView({behavior:"smooth"});
+}
+
+function submitForm(e) {
+    e.preventDefault();
+    alert("Message Sent Successfully!");
+}
+</script>
+
+</body>
+</html>
