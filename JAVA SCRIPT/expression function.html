@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            body{
+                background-color: #008cff;
+            }
+            p {
+                font-size: 100px;
+                color: #ea0606;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scope of Variables in Functions</title>
+    </head>
+    <body>
+        <script>
+            var result = function (a,b){return a + b}; // Global variable
+            document.write(result(5, 3)); // Output: 8
+        </script>
+    </body>
+</html>
