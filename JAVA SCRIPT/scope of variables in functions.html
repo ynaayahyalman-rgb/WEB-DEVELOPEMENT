@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script>
+            function myFunction() {
+                var x = 10; // Local variable
+                console.log("Inside function, x =", x); // Output: 10
+            }
+            myFunction();
+            console.log("Outside function, x =", typeof x); // Output: undefined
+        </script
+    <p>This code demonstrates the scope of variables in JavaScript. The variable 'x' is declared inside the function 'myFunction', making it a local variable. It is accessible only within that function. When we try to access 'x' outside the function, it is undefined because it is not in the global scope.</p>
+    <button type ="button" onclick="myFunction()">Click Me</button>
+    <p id ="demo"></p>
+    <p id ="demo1"></p>
+    <script>
+        function myFunction() {
+            var x = 10; // Local variable
+            document.getElementById("demo").innerHTML = "Inside function, x = " + x; // Output: 10
+        }
+        myFunction();
+        document.getElementById("demo1").innerHTML = "Outside function, x = " + typeof x; // Output: undefined
+    </script>
+</body>
+</html>
