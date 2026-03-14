@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+<script>
+function myFunction(a, b) {var a;
+    var max = 0;
+    for (var i = 0; i < arguments.length; i++) {
+        if (arguments[i] > max) {
+            max = arguments[i];
+        }
+    }
+    return max;
+}   
+document.getElementById("demo").innerHTML = myFunction(1, 123, 500, 115, 44, 88);
+</script>
+<style>
+    body{
+        background-color: lightblue;
+    }
+</style>
+</body>
+</html>
