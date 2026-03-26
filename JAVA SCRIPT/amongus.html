@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Among Us Mini</title>
+    <style>
+        body { margin: 0; background-color: #333; overflow: hidden; color: white; font-family: sans-serif; }
+        #map { width: 100vw; height: 100vh; position: relative; background-color: #555; }
+        
+        /* Crewmate Styling */
+        #player {
+            width: 50px; height: 60px;
+            background-color: red; /* Color */
+            border-radius: 15px;
+            position: absolute;
+            top: 50%; left: 50%;
+            transition: 0.1s;
+        }
+        #player::after {
+            content: '';
+            position: absolute;
+            top: 10px; left: 10px;
+            width: 30px; height: 20px;
+            background-color: #a2e8f7; /* Visor */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map">
+        <div id="player"></div>
+    </div>
+    <script>
+        // Basic Movement Logic
+        const player = document.getElementById('player');
+        let x = window.innerWidth / 2;
+        let y = window.innerHeight / 2;
+        const speed = 15;
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowUp') y -= speed;
+            if (e.key === 'ArrowDown') y += speed;
+            if (e.key === 'ArrowLeft') x -= speed;
+            if (e.key === 'ArrowRight') x += speed;
+            player.style.left = x + 'px';
+            player.style.top = y + 'px';
+        });
+    </script>
+</body>
+</html>

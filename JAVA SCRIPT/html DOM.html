@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML DOM Example</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #container { margin: 20px; }
+        .item { padding: 10px; background-color: #f0f0f0; margin-bottom: 5px; }
+        .highlight { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>  
+        <div class="item">Item 3</div>
+        <button id="highlightBtn">Highlight Items</button>
+    </div>
+    <script>
+       alert("Welcome to the HTML DOM Example! Click the button to highlight the items.");
+        const button = document.getElementById('highlightBtn');
+        const items = document.querySelectorAll('.item');
+
+        button.addEventListener('click', () => {
+            items.forEach(item => item.classList.toggle('highlight'));
+        });
+    </script>
+    <h1>HTML DOM Example</h1>
+    <p>This is a simple example of how to manipulate the HTML DOM using JavaScript.
+         Click the button to highlight the items.</p>
+    <ul>
+        <li>HTML DOM stands for Document Object Model.</li>
+        <li>It allows JavaScript to interact with HTML elements.</li>
+        <li>You can change the content, style, and structure of the document.</li>
+</html>
